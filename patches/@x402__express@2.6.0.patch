@@ -1,0 +1,7 @@
+diff --git a/dist/index.d.ts b/dist/index.d.ts
+new file mode 100644
+index 0000000000000000000000000000000000000000..81724b9584f55ae16c0adc035830d0e563b22043
+--- /dev/null
++++ b/dist/index.d.ts
+@@ -0,0 +1 @@
++export * from './cjs/index';

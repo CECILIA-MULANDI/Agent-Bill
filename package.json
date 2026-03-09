@@ -1,0 +1,15 @@
+{
+  "name": "agent-bill",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "pnpm --recursive run build",
+    "dev": "pnpm --recursive run dev"
+  },
+  "license": "MIT",
+  "pnpm": {
+    "patchedDependencies": {
+      "@x402/express@2.6.0": "patches/@x402__express@2.6.0.patch"
+    }
+  }
+}

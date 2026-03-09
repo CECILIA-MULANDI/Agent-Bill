@@ -1,0 +1,22 @@
+{
+  "name": "@agent-bill/middleware",
+  "version": "0.1.0",
+  "description": "x402 payment middleware for Express and Next.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.3.5",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@x402/evm": "^2.6.0",
+    "@x402/express": "^2.6.0",
+    "express": "^5.2.1"
+  }
+}
