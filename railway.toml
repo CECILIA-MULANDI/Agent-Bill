@@ -1,0 +1,5 @@
+[build]
+buildCommand = "pnpm install && pnpm --filter @agent-bill/middleware build"
+
+[deploy]
+startCommand = "pnpm --filter @agent-bill/express-quickstart-mainnet run start"

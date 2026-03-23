@@ -1,16 +1,17 @@
 {
-  "name": "@agent-bill/express-quickstart",
+  "name": "@agent-bill/express-quickstart-mainnet",
   "version": "0.0.1",
   "private": true,
   "scripts": {
     "dev": "tsx --env-file=.env server.ts",
-    "start": "node dist/server.js",
+    "start": "tsx server.ts",
     "build": "echo 'No build needed — run with: pnpm dev'"
   },
   "dependencies": {
     "@agent-bill/middleware": "workspace:*",
     "@x402/evm": "^2.6.0",
     "@x402/fetch": "^2.6.0",
+    "dotenv": "^17.3.1",
     "express": "^5.2.1",
     "viem": "^2.47.0"
   },

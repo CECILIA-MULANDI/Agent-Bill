@@ -1,6 +1,9 @@
 import express from "express";
 import { agentBill, requirePayment } from "@agent-bill/middleware";
+import dotenv from "dotenv";
 
+dotenv.config();
+const PORT = process.env.PORT || 3000;
 const app = express();
 agentBill.init({
   receivingAddress: process.env.RECEIVING_ADDRESS!,
@@ -22,8 +25,8 @@ app.get(
   }),
   (req, res) => {
     res.json({ city: "New York", temp: "72°F", humidity: "60%" });
-  },
+  }
 );
-app.listen(3000, () => {
-  console.log("Server running on http://localhost:3000");
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
 });
