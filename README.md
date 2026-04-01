@@ -5,6 +5,9 @@
 
 Built on [Base](https://base.org) · Powered by [x402 V2](https://x402.org) · Settles in USDC
 
+**Live demo:** [agent-billmiddleware-production.up.railway.app](https://agent-billmiddleware-production.up.railway.app/api/weather)
+· **Proof of payment:** [Basescan tx](https://basescan.org/tx/0x8be8fc88d7f7fb768315bc4bcd1b438d32b76bfa9ba24a95ed6dacdd2d1224cb)
+
 ---
 
 ## The Problem
@@ -62,9 +65,11 @@ AI Agent                    Your API (AgentBill)         x402.org Facilitator
 ```
 agent-bill/
 ├── packages/
-│   └── middleware/        # @agent-bill/middleware — Express + Next.js payment wall
+│   ├── middleware/        # @agent-bill/middleware — Express + Next.js payment wall
+│   └── client/           # @agent-bill/client — payment-enabled fetch for agents
 ├── examples/
-│   └── express-quickstart/  # Runnable demo server + paying test client
+│   ├── testnet/express-quickstart/   # Base Sepolia demo
+│   └── mainnet/express-quickstart/   # Base mainnet demo (deployed on Railway)
 └── README.md
 ```
 
@@ -128,9 +133,10 @@ See [`packages/middleware/README.md`](packages/middleware/README.md) for full AP
 ## Roadmap
 
 - [x] `@agent-bill/middleware` v0.1 — Express payment wall (x402 V2)
-- [x] `examples/express-quickstart` — runnable demo server + test client
 - [x] `@agent-bill/middleware` — Next.js App Router support (`withPayment`)
-- [ ] `examples/agent-client` — demo AI agent that auto-pays
+- [x] Mainnet deployment on Railway — [live 402 paywall](https://agent-billmiddleware-production.up.railway.app/api/weather)
+- [x] `@agent-bill/client` v0.1 — payment-enabled fetch for AI agents
+- [ ] Hono adapter — Cloudflare Workers edge support
 - [ ] Dashboard — payment analytics per endpoint
 
 ---
