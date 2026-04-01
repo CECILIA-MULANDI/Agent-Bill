@@ -15,24 +15,18 @@ importers:
 
   examples/mainnet/express-quickstart:
     dependencies:
+      '@agent-bill/client':
+        specifier: workspace:*
+        version: link:../../../packages/client
       '@agent-bill/middleware':
         specifier: workspace:*
         version: link:../../../packages/middleware
-      '@x402/evm':
-        specifier: ^2.6.0
-        version: 2.6.0(bufferutil@4.1.0)(ethers@6.16.0(bufferutil@4.1.0)(utf-8-validate@6.0.6))(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@x402/fetch':
-        specifier: ^2.6.0
-        version: 2.6.0(bufferutil@4.1.0)(typescript@5.9.3)(utf-8-validate@6.0.6)
       dotenv:
         specifier: ^17.3.1
         version: 17.3.1
       express:
         specifier: ^5.2.1
         version: 5.2.1
-      viem:
-        specifier: ^2.47.0
-        version: 2.47.0(bufferutil@4.1.0)(typescript@5.9.3)(utf-8-validate@6.0.6)(zod@3.25.76)
     devDependencies:
       '@types/express':
         specifier: ^5.0.6
@@ -49,21 +43,15 @@ importers:
 
   examples/testnet/express-quickstart:
     dependencies:
+      '@agent-bill/client':
+        specifier: workspace:*
+        version: link:../../../packages/client
       '@agent-bill/middleware':
         specifier: workspace:*
         version: link:../../../packages/middleware
-      '@x402/evm':
-        specifier: ^2.6.0
-        version: 2.6.0(bufferutil@4.1.0)(ethers@6.16.0(bufferutil@4.1.0)(utf-8-validate@6.0.6))(typescript@5.9.3)(utf-8-validate@6.0.6)
-      '@x402/fetch':
-        specifier: ^2.6.0
-        version: 2.6.0(bufferutil@4.1.0)(typescript@5.9.3)(utf-8-validate@6.0.6)
       express:
         specifier: ^5.2.1
         version: 5.2.1
-      viem:
-        specifier: ^2.47.0
-        version: 2.47.0(bufferutil@4.1.0)(typescript@5.9.3)(utf-8-validate@6.0.6)(zod@3.25.76)
     devDependencies:
       '@types/express':
         specifier: ^5.0.6
@@ -74,6 +62,25 @@ importers:
       tsx:
         specifier: ^4.19.4
         version: 4.21.0
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
+
+  packages/client:
+    dependencies:
+      '@x402/evm':
+        specifier: ^2.6.0
+        version: 2.6.0(bufferutil@4.1.0)(ethers@6.16.0(bufferutil@4.1.0)(utf-8-validate@6.0.6))(typescript@5.9.3)(utf-8-validate@6.0.6)
+      '@x402/fetch':
+        specifier: ^2.6.0
+        version: 2.6.0(bufferutil@4.1.0)(typescript@5.9.3)(utf-8-validate@6.0.6)
+      viem:
+        specifier: ^2.47.0
+        version: 2.47.0(bufferutil@4.1.0)(typescript@5.9.3)(utf-8-validate@6.0.6)(zod@3.25.76)
+    devDependencies:
+      '@types/node':
+        specifier: ^25.3.5
+        version: 25.3.5
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
@@ -3154,7 +3161,7 @@ snapshots:
       buffer: 6.0.3
       eventemitter3: 5.0.1
       uuid: 11.1.0
-      ws: 8.18.3(bufferutil@4.1.0)(utf-8-validate@6.0.6)
+      ws: 8.20.0(bufferutil@4.1.0)(utf-8-validate@6.0.6)
     optionalDependencies:
       bufferutil: 4.1.0
       utf-8-validate: 6.0.6
