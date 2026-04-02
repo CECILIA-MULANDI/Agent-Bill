@@ -11,5 +11,8 @@
     "patchedDependencies": {
       "@x402/express@2.6.0": "patches/@x402__express@2.6.0.patch"
     }
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0"
   }
 }
